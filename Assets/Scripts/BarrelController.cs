@@ -54,17 +54,17 @@ public class BarrelController : MonoBehaviour {
     //Calculamos donde estara posicionado el jugador cuando sea disparado segun la rotacion del objeto
     void setBarrelOutput() {
         if (rotBarrel <= 360 && rotBarrel >= 271) {
-            xBarrel += 1.2f;
-            yBarrel += 1.2f;
+            xBarrel += 1f;
+            yBarrel += 1f;
         } else if (rotBarrel <= 270 && rotBarrel >= 181) {
-            xBarrel += 1.2f;
-            yBarrel -= 1.2f;
+            xBarrel += 1f;
+            yBarrel -= 1f;
         } else if (rotBarrel <= 180 && rotBarrel >= 91) {
-            xBarrel -= 1.2f;
-            yBarrel -= 1.2f;
+            xBarrel -= 1f;
+            yBarrel -= 1f;
         } else  {
-            xBarrel -= 1.2f;
-            yBarrel += 1.2f;
+            xBarrel -= 1f;
+            yBarrel += 1f;
         }
     }
 

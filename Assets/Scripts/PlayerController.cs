@@ -9,12 +9,17 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         //aplicamos una fuerza de salida
         rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(transform.up * 400);
+        rb.AddForce(transform.up * 600);
     }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+    }
 }
 

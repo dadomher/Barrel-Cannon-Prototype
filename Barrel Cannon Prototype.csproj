@@ -248,7 +248,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AspectUtility.cs" />
     <Compile Include="Assets\Scripts\BarrelController.cs" />
+    <Compile Include="Assets\Scripts\ColumnPool.cs" />
+    <Compile Include="Assets\Scripts\GameControl.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\RepeatingBackground.cs" />
+    <Compile Include="Assets\Scripts\ScrollingObject.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
