@@ -5,9 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     Rigidbody2D rb;
 
-
-    private bool isDead = false;
-
 	// Use this for initialization
 	void Start () {
         //aplicamos una fuerza de salida
@@ -29,7 +26,6 @@ public class PlayerController : MonoBehaviour {
     }
 
     void playerIsDead() {
-        isDead = true;
         rb.velocity = Vector2.zero;
         this.GetComponent<Animation>().enabled = false;
         GameControl.instance.PlayerDied();

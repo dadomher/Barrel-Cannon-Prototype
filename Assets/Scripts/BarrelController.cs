@@ -6,6 +6,7 @@ public class BarrelController : MonoBehaviour {
     public Sprite barrel_off, barrel_on;
     public GameObject barDirection, playerShell;
     public AnimationClip rotate;
+    public bool barrelContainPlayer = false;
 
     GameObject barDirection_clone, playerShell_clone;
     float xBarrel, yBarrel, rotBarrel;
@@ -22,6 +23,10 @@ public class BarrelController : MonoBehaviour {
         if (this.GetComponent<SpriteRenderer>().sprite == barrel_on && Input.GetKeyDown(KeyCode.Space)) {
             FirePlayer();
         }
+
+        if(barrelContainPlayer && this.transform.position.x < -10) {
+            GameControl.instance.PlayerDied();
+        }
     }
 
     //Funcion para activar las propiedades del barril cuando contiene el personaje (sprite, direccion, etc)
@@ -36,6 +41,7 @@ public class BarrelController : MonoBehaviour {
         this.GetComponent<Animator>().enabled = false;
         this.GetComponent<SpriteRenderer>().sprite = barrel_off;
         Destroy(barDirection_clone);
+        barrelContainPlayer = false;
     }
 
         //Funcion para disparar al jugador
@@ -80,6 +86,7 @@ public class BarrelController : MonoBehaviour {
             //print(collision.gameObject);
             Destroy(collision.gameObject);
             GameControl.instance.PlayerScored();
+            barrelContainPlayer = true;
             BarrelContainPlayer();
         }
     }

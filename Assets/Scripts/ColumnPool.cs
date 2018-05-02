@@ -9,7 +9,6 @@ public class ColumnPool : MonoBehaviour {
     public float spawnRate = 5f;
     public float barrelMin = -4f;
     public float barrelMax = 4f;
- 
 
     private GameObject[] barrels;
     private Vector2 objectPoolPosition = new Vector2(-15f, -25f);
@@ -17,9 +16,8 @@ public class ColumnPool : MonoBehaviour {
     private float spawnXPosition = 8f;
     private int currentBarrel = 0;
 
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         barrels = new GameObject[barrelPoolSize];
         for (int i = 0; i < barrelPoolSize; i++) {
             barrels[i] = (GameObject)Instantiate(barrelPrefab, objectPoolPosition, Quaternion.identity);
@@ -44,7 +42,6 @@ public class ColumnPool : MonoBehaviour {
     void createBarrel(float x, float y) {
         barrels[currentBarrel].transform.position = new Vector2(x, y);
 
-        //print(barrels[currentBarrel].transform.position);
         currentBarrel++;
         if (currentBarrel >= barrelPoolSize)
         {

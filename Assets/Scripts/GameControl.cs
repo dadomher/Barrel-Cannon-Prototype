@@ -33,16 +33,10 @@ public class GameControl : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (gameOver == true && Input.GetKeyDown(KeyCode.Space))
-        {
+        if (gameOver == true && Input.GetKeyDown(KeyCode.Space)) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-
-            
         }
-       
     }
-
 
     public void PlayerScored() {
         if (gameOver) return;
