@@ -17,14 +17,22 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        if(this.transform.position.x < -10 || this.transform.position.x > 10) {
+            playerIsDead();
+        }
 	}
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.transform.CompareTag("ground")) {
-            isDead = true;
-            GameControl.instance.PlayerDied();
+            playerIsDead();
         }
+    }
+
+    void playerIsDead() {
+        isDead = true;
+        rb.velocity = Vector2.zero;
+        this.GetComponent<Animation>().enabled = false;
+        GameControl.instance.PlayerDied();
     }
 }
 

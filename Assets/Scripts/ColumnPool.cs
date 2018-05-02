@@ -44,7 +44,7 @@ public class ColumnPool : MonoBehaviour {
     void createBarrel(float x, float y) {
         barrels[currentBarrel].transform.position = new Vector2(x, y);
 
-        print(barrels[currentBarrel].transform.position);
+        //print(barrels[currentBarrel].transform.position);
         currentBarrel++;
         if (currentBarrel >= barrelPoolSize)
         {

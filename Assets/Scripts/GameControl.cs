@@ -29,13 +29,20 @@ public class GameControl : MonoBehaviour {
     void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(gameOver == true && Input.GetKeyDown(KeyCode.Space)) {
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (gameOver == true && Input.GetKeyDown(KeyCode.Space))
+        {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+
+            
         }
-	}
+       
+    }
+
 
     public void PlayerScored() {
         if (gameOver) return;
