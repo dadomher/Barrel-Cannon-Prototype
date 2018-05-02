@@ -9,12 +9,14 @@ public class ColumnPool : MonoBehaviour {
     public float spawnRate = 5f;
     public float barrelMin = -4f;
     public float barrelMax = 4f;
+ 
 
     private GameObject[] barrels;
     private Vector2 objectPoolPosition = new Vector2(-15f, -25f);
     private float timeSinceLastSpawned = 0;
     private float spawnXPosition = 8f;
     private int currentBarrel = 0;
+
 
 	// Use this for initialization
 	void Start () {

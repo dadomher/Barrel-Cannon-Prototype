@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     Rigidbody2D rb;
 
+
+    private bool isDead = false;
+
 	// Use this for initialization
 	void Start () {
         //aplicamos una fuerza de salida
@@ -14,12 +17,11 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.transform.CompareTag("ground")) isDead = true;
     }
 }
 

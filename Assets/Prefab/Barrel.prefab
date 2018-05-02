@@ -135,6 +135,7 @@ MonoBehaviour:
     type: 2}
   playerShell: {fileID: 1606866703367152, guid: ebfb0c864f1214c4caeb13c356a29a1d,
     type: 2}
+  rotate: {fileID: 7400000, guid: 2fcfdfd0857665845942fe3fd357e5c0, type: 2}
 --- !u!212 &212474696752266780
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -5,9 +5,11 @@ using UnityEngine;
 public class BarrelController : MonoBehaviour {
     public Sprite barrel_off, barrel_on;
     public GameObject barDirection, playerShell;
+    public AnimationClip rotate;
 
     GameObject barDirection_clone, playerShell_clone;
     float xBarrel, yBarrel, rotBarrel;
+    private Animation animationRotate;
 
     // Use this for initialization
     void Start () {
@@ -49,6 +51,10 @@ public class BarrelController : MonoBehaviour {
 
         //Instanciamos al jugador para que salga disparado
         playerShell_clone = Instantiate(playerShell, new Vector3(xBarrel, yBarrel, transform.position.z), transform.rotation) as GameObject;
+
+        animationRotate = playerShell_clone.AddComponent<Animation>();
+        animationRotate.AddClip(rotate, "rotate");
+        animationRotate.Play("rotate");
     }
 
     //Calculamos donde estara posicionado el jugador cuando sea disparado segun la rotacion del objeto
