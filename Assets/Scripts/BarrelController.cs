@@ -79,6 +79,7 @@ public class BarrelController : MonoBehaviour {
         if(collision.gameObject.CompareTag("player")) {
             //print(collision.gameObject);
             Destroy(collision.gameObject);
+            GameControl.instance.PlayerScored();
             BarrelContainPlayer();
         }
     }
