@@ -13,6 +13,9 @@ public class GameControl : MonoBehaviour {
     public Text scoreText;
 
     private int score = 0;
+    private float gameTime = 0.0f;
+    private int counterTimesIncrement = 0;
+    private int preventsRepetition = 10;
 
     private void Awake()
     {
@@ -31,10 +34,17 @@ public class GameControl : MonoBehaviour {
 	}
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+        gameTime += Time.deltaTime;
         if (gameOver == true && Input.GetKeyDown(KeyCode.Space)) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        
+        if (preventsRepetition <= gameTime && gameTime % 20 >= 0 && counterTimesIncrement < 6) {
+            scrollSpeed += -0.25f;
+            preventsRepetition += 10;
+            counterTimesIncrement++;
+            print(scrollSpeed);
         }
     }
 
