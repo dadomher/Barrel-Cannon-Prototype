@@ -11,10 +11,11 @@ public class BarrelController : MonoBehaviour {
     GameObject barDirection_clone, playerShell_clone;
     float xBarrel, yBarrel, rotBarrel;
     private Animation animationRotate;
+    private float bonusTime;
 
     // Use this for initialization
     void Start () {
-        
+     
     }
 	
 	// Update is called once per frame
@@ -26,6 +27,10 @@ public class BarrelController : MonoBehaviour {
 
         if(barrelContainPlayer && this.transform.position.x < -10) {
             GameControl.instance.PlayerDied();
+        }
+
+        if(barrelContainPlayer) {
+            bonusTime += Time.deltaTime;
         }
     }
 
@@ -46,6 +51,8 @@ public class BarrelController : MonoBehaviour {
 
         //Funcion para disparar al jugador
     void FirePlayer() {
+        GameControl.instance.FixBonus(bonusTime);
+
         //Almacenamos ciertas propiedades del barril
         xBarrel = transform.position.x;
         yBarrel = transform.position.y;

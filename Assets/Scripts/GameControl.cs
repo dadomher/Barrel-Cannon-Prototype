@@ -11,12 +11,14 @@ public class GameControl : MonoBehaviour {
     public bool gameOver = false;
     public GameObject gameOverText;
     public int preventsRepetition = 30;
-    public Text scoreText;
+    public Text scoreText, bonusText;
 
-    private int score = 0;
-    private float gameTime = 0.0f;
+    private int score = 0, bonusLvl = 0;
+
     private int counterTimesIncrement = 0;
     private int timeAplied;
+
+    public float gameTime;
 
 
     private void Awake()
@@ -52,13 +54,54 @@ public class GameControl : MonoBehaviour {
 
     public void PlayerScored() {
         if (gameOver) return;
-        score += 10;
-        scoreText.text = "Score: " + score.ToString();
+
+        if (bonusLvl == 1) {
+            score += 10;
+            scoreText.text = "Score: " + score.ToString();
+        } else if (bonusLvl == 2) {
+            score += 20;
+            scoreText.text = "Score: " + score.ToString();
+        } else if (bonusLvl == 3) {
+            score += 30;
+            scoreText.text = "Score: " + score.ToString();
+        } else if (bonusLvl == 4) {
+            score += 40;
+            scoreText.text = "Score: " + score.ToString();
+        } 
+    }
+
+    public void FixBonus(float bonusTime) {
+        if (bonusLvl == 0){
+            bonusLvl++;
+            bonusText.text = "Bonus: " + bonusLvl.ToString();
+        }
+        else if (bonusLvl == 1 && bonusTime < 3.75f) {
+            bonusLvl++;
+            bonusText.text = "Bonus: " + bonusLvl.ToString();
+        }
+        else if (bonusLvl == 2 && bonusTime < 3.5f) {
+            bonusLvl++;
+            bonusText.text = "Bonus: " + bonusLvl.ToString();
+        }
+        else if (bonusLvl == 3 && bonusTime < 3.25f) {
+            bonusLvl++;
+            bonusText.text = "Bonus: " + bonusLvl.ToString();
+        }
+        else {
+            bonusLvl = 1;
+            bonusText.text = "Bonus: " + bonusLvl.ToString();
+        }
+
+        print(bonusTime + " -> " + bonusLvl);
     }
 
     public void PlayerDied() {
         gameOverText.SetActive(true);
         gameOver = true;
+    }
+
+    public float sentGameTime() {
+        return gameTime;
     }
 
 }
