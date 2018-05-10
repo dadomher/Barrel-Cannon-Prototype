@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
     Rigidbody2D rb;
+    bool prueba = true;
 
 	// Use this for initialization
 	void Start () {
@@ -14,14 +15,19 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(this.transform.position.x < -10 || this.transform.position.x > 10) {
+        if(this.transform.position.x < -12 || this.transform.position.x > 12) {
             playerIsDead();
+            if(prueba) {
+                SoundManager.instance.diePlaySound();
+                prueba = false;
+            }
         }
 	}
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.transform.CompareTag("ground")) {
             playerIsDead();
+            SoundManager.instance.diePlaySound();
         }
     }
 

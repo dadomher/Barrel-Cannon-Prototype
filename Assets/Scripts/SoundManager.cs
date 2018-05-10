@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
-    public AudioClip buttonSound, cannonSound;
+    public AudioClip buttonSound, cannonSound, dieSound;
     AudioSource fuenteAudio;
     public static SoundManager instance;
 
@@ -37,6 +37,11 @@ public class SoundManager : MonoBehaviour {
 
     public void cannonPlaySound() {
         fuenteAudio.clip = cannonSound;
+        fuenteAudio.Play();
+    }
+
+    public void diePlaySound(){
+        fuenteAudio.clip = dieSound;
         fuenteAudio.Play();
     }
 

@@ -294,10 +294,10 @@ RectTransform:
   m_Father: {fileID: 1401576711}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -505, y: 247}
-  m_SizeDelta: {x: -1052, y: -548}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 71, y: -77}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &641167762
 MonoBehaviour:
@@ -357,7 +357,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013841152, y: -6.765006}
+  m_Offset: {x: 0.017240524, y: -6.765006}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -368,7 +368,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.982315, y: 0.47291565}
+  m_Size: {x: 19.989113, y: 0.47291565}
   m_EdgeRadius: 0
 --- !u!50 &729661639
 Rigidbody2D:
@@ -778,6 +778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonSound: {fileID: 8300000, guid: eb43d5df0337963429f93f2f15738698, type: 3}
   cannonSound: {fileID: 8300000, guid: e64689c076cf7f64d90080420db06f81, type: 3}
+  dieSound: {fileID: 8300000, guid: ccae65c69761b2149b980f2bcd7b2726, type: 3}
 --- !u!82 &1118902488
 AudioSource:
   m_ObjectHideFlags: 0

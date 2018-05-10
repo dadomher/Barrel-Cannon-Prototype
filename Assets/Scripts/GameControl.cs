@@ -10,7 +10,7 @@ public class GameControl : MonoBehaviour {
     public float scrollSpeed = -2f;
     public bool gameOver = false;
     public GameObject gameOverText;
-    public int preventsRepetition = 30;
+    public int preventsRepetition = 25;
     public Text scoreText, bonusText;
 
     private int score = 0, bonusLvl = 0;
@@ -45,7 +45,7 @@ public class GameControl : MonoBehaviour {
         }
         
         if (preventsRepetition <= gameTime && gameTime % timeAplied >= 0 && counterTimesIncrement < 5) {
-            scrollSpeed += -0.20f;
+            scrollSpeed += -0.25f;
             preventsRepetition += timeAplied;
             counterTimesIncrement++;
             print(scrollSpeed);
