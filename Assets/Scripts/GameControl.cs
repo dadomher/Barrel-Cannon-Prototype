@@ -60,4 +60,5 @@ public class GameControl : MonoBehaviour {
         gameOverText.SetActive(true);
         gameOver = true;
     }
+
 }
