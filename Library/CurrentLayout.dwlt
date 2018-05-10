@@ -516,18 +516,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefab
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 46
   m_LastFolders:
-  - Assets/Prefab
+  - Assets/Scripts
   m_LastFoldersGridSize: 46
   m_LastProjectPath: D:\Unity Projects\Barrel Cannon Prototype
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ca290000
-    m_LastClickedID: 10698
+    m_SelectedIDs: 88290000
+    m_LastClickedID: 10632
     m_ExpandedIDs: 000000005229000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -640,9 +640,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 162a0000
-    m_LastClickedID: 10774
-    m_ExpandedIDs: 9efbffff00000000242a0000
+    m_SelectedIDs: 9efbffff
+    m_LastClickedID: -1122
+    m_ExpandedIDs: deabfcff00000000242a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -661,7 +661,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 13}
     m_SearchString: 
   m_ExpandedScenes:
-  - Main
+  - Menu
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -693,14 +693,14 @@ MonoBehaviour:
     height: 729
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 3197.9057377693416
+  lastFramingTime: 14306.652332038402
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.6178427, y: -6.093458, z: -0.14254412}
+    m_Target: {x: 0, y: 0, z: -10}
     speed: 2
-    m_Value: {x: 6.6178427, y: -6.093458, z: -0.14254412}
+    m_Value: {x: 0, y: 0, z: -10}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -728,9 +728,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 14.766956
+    m_Target: 22
     speed: 2
-    m_Value: 14.766956
+    m_Value: 22
   m_Ortho:
     m_Target: 1
     speed: 2

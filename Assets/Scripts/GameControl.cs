@@ -10,12 +10,14 @@ public class GameControl : MonoBehaviour {
     public float scrollSpeed = -2f;
     public bool gameOver = false;
     public GameObject gameOverText;
+    public int preventsRepetition = 30;
     public Text scoreText;
 
     private int score = 0;
     private float gameTime = 0.0f;
     private int counterTimesIncrement = 0;
-    private int preventsRepetition = 10;
+    private int timeAplied;
+
 
     private void Awake()
     {
@@ -30,8 +32,8 @@ public class GameControl : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
+        timeAplied = preventsRepetition;
+    }
 
     // Update is called once per frame
     void Update() {
@@ -40,9 +42,9 @@ public class GameControl : MonoBehaviour {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         
-        if (preventsRepetition <= gameTime && gameTime % 20 >= 0 && counterTimesIncrement < 6) {
-            scrollSpeed += -0.25f;
-            preventsRepetition += 10;
+        if (preventsRepetition <= gameTime && gameTime % timeAplied >= 0 && counterTimesIncrement < 5) {
+            scrollSpeed += -0.20f;
+            preventsRepetition += timeAplied;
             counterTimesIncrement++;
             print(scrollSpeed);
         }
