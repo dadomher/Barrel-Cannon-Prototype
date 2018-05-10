@@ -75,15 +75,15 @@ public class GameControl : MonoBehaviour {
             bonusLvl++;
             bonusText.text = "Bonus: " + bonusLvl.ToString();
         }
-        else if (bonusLvl == 1 && bonusTime < 3.75f) {
+        else if (bonusLvl == 1 && bonusTime < 4.0f) {
             bonusLvl++;
             bonusText.text = "Bonus: " + bonusLvl.ToString();
         }
-        else if (bonusLvl == 2 && bonusTime < 3.5f) {
+        else if (bonusLvl == 2 && bonusTime < 3.75f) {
             bonusLvl++;
             bonusText.text = "Bonus: " + bonusLvl.ToString();
         }
-        else if (bonusLvl == 3 && bonusTime < 3.25f) {
+        else if (bonusLvl == 3 && bonusTime < 3.50f) {
             bonusLvl++;
             bonusText.text = "Bonus: " + bonusLvl.ToString();
         }

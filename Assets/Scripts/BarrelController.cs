@@ -52,6 +52,8 @@ public class BarrelController : MonoBehaviour {
         //Funcion para disparar al jugador
     void FirePlayer() {
         GameControl.instance.FixBonus(bonusTime);
+        bonusTime = 0;
+        SoundManager.instance.cannonPlaySound();
 
         //Almacenamos ciertas propiedades del barril
         xBarrel = transform.position.x;
