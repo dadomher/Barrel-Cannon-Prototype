@@ -5,7 +5,7 @@ using UnityEngine;
 public class ColumnPool : MonoBehaviour {
 
     public int barrelPoolSize = 5;
-    public GameObject barrelPrefab;
+    public GameObject barrelPrefab, arrowPrefab;
     public float spawnRate = 5f;
     public float barrelMin = -4f;
     public float barrelMax = 4f;
@@ -48,4 +48,5 @@ public class ColumnPool : MonoBehaviour {
             currentBarrel = 0;
         }
     }
+
 }

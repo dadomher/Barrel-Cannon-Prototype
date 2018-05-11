@@ -762,6 +762,8 @@ MonoBehaviour:
   barrelPoolSize: 5
   barrelPrefab: {fileID: 1683694595003396, guid: 45dbd7388efd98b4a98e18a046e82dc6,
     type: 2}
+  arrowPrefab: {fileID: 1850886179256890, guid: ca96744b0ef91d64eb6ca0648de2eff9,
+    type: 2}
   spawnRate: 5
   barrelMin: -4
   barrelMax: 4
