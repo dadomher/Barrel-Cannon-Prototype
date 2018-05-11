@@ -10,11 +10,11 @@ public class ColumnPool : MonoBehaviour {
     public float barrelMin = -4f;
     public float barrelMax = 4f;
 
-    private GameObject[] barrels;
+    private GameObject[] barrels, arrows;
     private Vector2 objectPoolPosition = new Vector2(-15f, -25f);
     private float timeSinceLastSpawned = 0;
     private float spawnXPosition = 8f;
-    private int currentBarrel = 0;
+    private int currentBarrel = 0, currentArrow = 0;
 
     // Use this for initialization
     void Start () {
@@ -23,6 +23,13 @@ public class ColumnPool : MonoBehaviour {
             barrels[i] = (GameObject)Instantiate(barrelPrefab, objectPoolPosition, Quaternion.identity);
         }
 
+        arrows = new GameObject[100];
+        for (int i = 0; i < 100; i++)
+        {
+            arrows[i] = (GameObject)Instantiate(arrowPrefab, objectPoolPosition, Quaternion.identity);
+        }
+
+
         createBarrel(8, 0);
     }
 	
@@ -30,7 +37,7 @@ public class ColumnPool : MonoBehaviour {
 	void Update () {
         timeSinceLastSpawned += Time.deltaTime;
         //barrels[currentBarrel].transform.position = new Vector2(0, 0);
-  
+        createEnemy();
         if (GameControl.instance.gameOver == false && timeSinceLastSpawned >= spawnRate) {
             float spawnYPosition = Random.Range(barrelMin, barrelMax);
             timeSinceLastSpawned = 0;
@@ -49,4 +56,12 @@ public class ColumnPool : MonoBehaviour {
         }
     }
 
+    void createEnemy() {
+        arrows[currentArrow].transform.position = new Vector2(Random.Range(0, 16), -4);
+        currentArrow++;
+        if (currentArrow >= 100)
+        {
+            currentArrow = 0;
+        }
+    }
 }
