@@ -45,8 +45,7 @@ public class GameControl : MonoBehaviour {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
+        if (Input.GetKeyDown(KeyCode.Escape))  {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
         }
 

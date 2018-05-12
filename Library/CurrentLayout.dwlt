@@ -533,18 +533,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Unity Projects\Barrel Cannon Prototype
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 402a0000
-    m_LastClickedID: 10816
+    m_SelectedIDs: 102b0000
+    m_LastClickedID: 11024
     m_ExpandedIDs: 00000000402a0000fa2b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -659,21 +659,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 20c6fefff0c6feffcac9feffdec9feff76d0feff02d1feffdcd3fefff0d3feff20ddfeffe8e9ffff70eaffff64edffff6eedffff68f8ffff9efbffff00000000f42d000066310000823100005034000068340000
+    m_ExpandedIDs: 0053feffe453feffbe56feffd256feff0e39ffff9efbffff00000000ea2c0000fe2c0000222d00003a2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: GameOverText
+      m_OriginalName: GameOverText
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 11554
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 13}
     m_SearchString: 
@@ -715,9 +715,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 482.74026, y: 275.729, z: 2.9413357}
+    m_Target: {x: 532.8192, y: 268.03714, z: 0.25}
     speed: 2
-    m_Value: {x: 482.74026, y: 275.729, z: 2.9413357}
+    m_Value: {x: 532.8192, y: 268.03714, z: 0.25}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -745,9 +745,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 913.5061
+    m_Target: 1195.9526
     speed: 2
-    m_Value: 913.5061
+    m_Value: 1195.9526
   m_Ortho:
     m_Target: 1
     speed: 2
