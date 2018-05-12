@@ -44,8 +44,13 @@ public class GameControl : MonoBehaviour {
         if (gameOver == true && Input.GetKeyDown(KeyCode.Space)) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        
-        if(gameOver == false && (int)gameTime == contadorSpawnEnemies) {
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
+        }
+
+        if (gameOver == false && (int)gameTime == contadorSpawnEnemies) {
             for(int i = 0; i < Random.Range(1,3); i++) {
                 ColumnPool.instance.createEnemy();
             }

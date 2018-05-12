@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour {
     public AudioClip buttonSound, cannonSound, dieSound;
     AudioSource fuenteAudio;
     public static SoundManager instance;
+ 
 
     private void Awake()
     {
@@ -43,6 +44,14 @@ public class SoundManager : MonoBehaviour {
     public void diePlaySound(){
         fuenteAudio.clip = dieSound;
         fuenteAudio.Play();
+    }
+
+    public void muteMusic() {
+        ambienMusicScript.instance.ambienMusicEnable();
+    }
+
+    public void muteSound() {
+
     }
 
 }

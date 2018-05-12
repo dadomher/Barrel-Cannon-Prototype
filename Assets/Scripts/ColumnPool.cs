@@ -64,6 +64,9 @@ public class ColumnPool : MonoBehaviour {
     void createBarrel(float x, float y) {
         barrels[currentBarrel].transform.position = new Vector2(x, y);
 
+        barrels[currentBarrel].transform.rotation = Quaternion.Euler(0, 0, 65);
+
+
         currentBarrel++;
         if (currentBarrel >= barrelPoolSize)
         {
