@@ -6,8 +6,8 @@ public class PlayerController : MonoBehaviour {
     Rigidbody2D rb;
     bool prueba = true;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         //aplicamos una fuerza de salida
         rb = GetComponent<Rigidbody2D>();
         rb.AddForce(transform.up * 600);
@@ -25,9 +25,10 @@ public class PlayerController : MonoBehaviour {
 	}
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.transform.CompareTag("ground")) {
+        if (collision.transform.CompareTag("ground") || collision.transform.CompareTag("arrow")) {
             playerIsDead();
             SoundManager.instance.diePlaySound();
+            this.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 

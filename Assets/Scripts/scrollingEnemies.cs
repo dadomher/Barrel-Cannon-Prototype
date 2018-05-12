@@ -6,19 +6,17 @@ public class scrollingEnemies : MonoBehaviour
 {
 
     private Rigidbody2D rb2d;
-    public float scrollSpeed = -10.0f;
+    public float scrollSpeed;
 
     // Use this for initialization
-    void Start()
-    {
+    void Start() {
         rb2d = GetComponent<Rigidbody2D>();
-        rb2d.velocity = new Vector2(scrollSpeed, scrollSpeed);
     }
 
     // Update is called once per frame
     void Update() {
-
-        rb2d.velocity = new Vector2(scrollSpeed, (-1)*scrollSpeed);
+        scrollSpeed = Random.Range(-4.0f, -8.0f);
+        rb2d.velocity = new Vector2(scrollSpeed, (-1)* scrollSpeed);
 
         
         if (GameControl.instance.gameOver) {

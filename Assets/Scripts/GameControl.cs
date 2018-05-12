@@ -17,6 +17,7 @@ public class GameControl : MonoBehaviour {
 
     private int counterTimesIncrement = 0;
     private int timeAplied;
+    private int contadorSpawnEnemies = 10;
 
     public float gameTime;
 
@@ -44,6 +45,12 @@ public class GameControl : MonoBehaviour {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         
+        if(gameOver == false && (int)gameTime == contadorSpawnEnemies) {
+            for(int i = 0; i < Random.Range(1,3); i++) {
+                ColumnPool.instance.createEnemy();
+            }
+            contadorSpawnEnemies += Random.Range(2, 5);
+        }
         if (preventsRepetition <= gameTime && gameTime % timeAplied >= 0 && counterTimesIncrement < 5) {
             scrollSpeed += -0.25f;
             preventsRepetition += timeAplied;
@@ -56,16 +63,16 @@ public class GameControl : MonoBehaviour {
         if (gameOver) return;
 
         if (bonusLvl == 1) {
-            score += 10;
+            score += 100;
             scoreText.text = "Score: " + score.ToString();
         } else if (bonusLvl == 2) {
-            score += 20;
+            score += 150;
             scoreText.text = "Score: " + score.ToString();
         } else if (bonusLvl == 3) {
-            score += 30;
+            score += 250;
             scoreText.text = "Score: " + score.ToString();
         } else if (bonusLvl == 4) {
-            score += 40;
+            score += 500;
             scoreText.text = "Score: " + score.ToString();
         } 
     }
@@ -75,11 +82,11 @@ public class GameControl : MonoBehaviour {
             bonusLvl++;
             bonusText.text = "Bonus: " + bonusLvl.ToString();
         }
-        else if (bonusLvl == 1 && bonusTime < 4.0f) {
+        else if (bonusLvl == 1 && bonusTime < 5.0f) {
             bonusLvl++;
             bonusText.text = "Bonus: " + bonusLvl.ToString();
         }
-        else if (bonusLvl == 2 && bonusTime < 3.75f) {
+        else if (bonusLvl == 2 && bonusTime < 4.25f) {
             bonusLvl++;
             bonusText.text = "Bonus: " + bonusLvl.ToString();
         }
